@@ -1,10 +1,21 @@
-# FHEVM React Template
+# 🔐 Encrypted Hire Form — FHEVM dApp
 
-A minimal React frontend template for building FHEVM-enabled decentralized applications (dApps). This template provides a simple development interface for interacting with FHEVM smart contracts, specifically the `FHECounter.sol` contract.
+A minimal **React + Solidity + FHEVM** decentralized application for **privacy-preserving recruitment**.  
+This project demonstrates how to use **Fully Homomorphic Encryption (FHE)** on-chain to collect encrypted quiz answers from job candidates, ensuring their data remains private even on a public blockchain.
 
-## 🚀 What is FHEVM?
+---
 
-FHEVM (Fully Homomorphic Encryption Virtual Machine) enables computation on encrypted data directly on Ethereum. This template demonstrates how to build dApps that can perform computations while keeping data private.
+## 🚀 Overview
+
+The **Encrypted Hire Form** dApp allows recruiters to collect quiz or survey answers from applicants **without ever revealing the answers in plaintext**.  
+Each candidate encrypts their response locally (client-side) using the **FHEVM SDK**, then submits it to the blockchain along with a zero-knowledge proof.
+
+The contract stores these encrypted responses securely and ensures:
+- Each address can only submit once.
+- Data can only be decrypted with explicit permission.
+- The dApp frontend integrates directly with the FHEVM runtime.
+
+---
 
 ## ✨ Features
 
@@ -134,8 +145,8 @@ fhevm-react-template/
 
 ### Key Components
 
-#### 🔗 FHEVM Integration (`packages/nextjs/hooks/fhecounter-example/`)
-- **`useFHECounterWagmi.tsx`**: Example hook demonstrating FHEVM contract interaction
+#### 🔗 FHEVM Integration (`packages/nextjs/hooks`)
+- **`useEncryptedHireForm.tsx`**: Example hook demonstrating FHEVM contract interaction
 - Essential hooks for FHEVM-enabled smart contract communication
 - Easily copyable to any FHEVM + React project
 

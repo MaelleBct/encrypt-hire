@@ -14,7 +14,7 @@ import "./tasks/FHECounter";
 
 // Run 'npx hardhat vars setup' to see the list of variables that need to be set
 
-const MNEMONIC: string = "bus certain alpha fly beef raw like chalk visit swallow special element";
+const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
 const INFURA_API_KEY: string = vars.get("INFURA_API_KEY", "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
 const config: HardhatUserConfig = {
